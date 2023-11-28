@@ -1,0 +1,179 @@
+/*==================GLOBALES=====================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+
+/*==================MENU=====================*/
+
+#menu li > a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;    
+}
+
+#menu form > button{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+/*==================SLIDER DE IMAGENES=====================*/
+
+.carousel-inner{
+    max-height: 39rem;
+}
+
+
+
+/*==================SECCION NUESTERO EQUIPO IMAGENES=====================*/
+
+
+
+/*==================SECCION NUESTERO EQUIPO MAPA=====================*/
+.mapa{
+ 
+    width: 90%;
+    height: 500px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#local{
+    background: #f3f3f3;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 100%;
+    padding-top: 90px;
+    margin-left: 20px;
+}
+
+/*==================SECCION NUESTERO EQUIPO LUGAR=====================*/
+
+#numeros-local div{
+    padding: 0 20px 0 0;
+    margin: 20px 20px 0 0;
+    height: 48px;
+}
+
+#numeros-local div:not(:last-child){
+    border-right: 2px solid #3f3f3f;
+}
+
+#numeros-local div:not(:firs-child){
+    padding-left: 10px;
+}
+
+#numeros-local p{
+    margin: 10;
+    text-align: center;
+}
+
+/*==================CONTACTOS BG=====================*/
+#bg-contactos{
+    position:relative;
+    
+} 
+
+ #seccion-contacto{
+    background-color: #1b2a4e;
+    min-height:800px;
+    position:relative;
+}   
+
+
+/*==================CONTACTOS FORMULARIO=====================*/
+
+#contenedor-formulario{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background: #fbfafa;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    max-width: 500px;
+}
+
+#titulo-formulario{
+    color: #3f3f3f;
+}
+
+/*==================FOOTER=====================*/
+
+footer{
+    background: #1b2a4e;
+    min-height: 100px;
+
+}
+
+footer p{
+    color: #f3f3f3;
+    text-align: center;
+}
+
+#iconos{
+    font-size: 26px;
+    padding: 0 8px;
+    color: #f3f3f3;
+
+}
+
+/*==================MEDIA QUERIES PANTALLA ANCHA=====================*/
+
+@media(max-width: 1200px){
+    #local{
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .wrapper{
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;
+    }
+}
+
+/*==================MEDIA QUERIES PANTALLA SM=====================*/
+
+@media(max-width:768px){
+    #intro, #equipo{
+        width: 90%  !important;
+    }
+
+    .servicio-fila{
+        width: 100% !important;
+        text-align: center;
+    }
+
+     
+}
+
+
+/*==================MEDIA QUERIES PANTALLA EXTRA-SM=====================*/
+
+@media(max-width: 576px){
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+}

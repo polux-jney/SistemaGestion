@@ -1,0 +1,7 @@
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+ErrorDocument 404 /vistas/error/404.html
+ErrorDocument 403 /vistas/error/403.html
