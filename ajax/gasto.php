@@ -3,7 +3,7 @@ require_once "../modelos/gasto.php";
 session_start();
 
 $gastoA = new Gasto();
-
+ 
 
 
 //Obtenemos nuestras variables y limpiarlos del arreglo post
@@ -18,7 +18,7 @@ $idCategoria=isset($_POST['idCategoria'])?limpiarCadenas($_POST['idCategoria']):
 
 //Agregamos lógica para fechas de registro y variables auxiliares 
 date_default_timezone_set('America/Mexico_City');
-$fechaActualizacion=date("yyyy-MM-dd H:i:s");
+$fechaActualizacion=date("Y-m-d H:i:s");
 $idEmpActualiza= $_SESSION['id']; // Cambiar por el usuario de la sesion.
 
 
@@ -66,6 +66,8 @@ switch ($_GET["op"]){
         $rspta=$gastoA->editar($idGasto, $fechaGasto, $descripcionGasto,$idCategoria, $gasto, $fechaActualizacion, $idEmpActualiza);
         //Configuramos el mensaje de respuesta
         echo $rspta!=0?"Gasto actualizado":"Error gasto no actualizado";
+        //echo $fechaActualizacion;
+        
       }
       
     break;
@@ -74,7 +76,19 @@ switch ($_GET["op"]){
       //Llamamos al método mostrar de nuestro objeto
       $rspta=$gastoA->mostrar($idGasto);
       //codificamos a json el resultado para que viaje correctamente por request.
-      echo json_encode($rspta);
+      /*write_log("ajax empleado mostrar");
+      write_log(json_encode($rspta)); registros para el debug.log*/
+
+      $rspta["descripcionGasto"] = $rspta["descripcionGasto"];
+      $rspta["gasto"] = $rspta["gasto"];
+      
+      if(strlen(strtotime($rspta["fechaGasto"]))>1) {
+        # code...
+        $rspta["fechaGasto"]=date("Y-m-d",strtotime($rspta["fechaGasto"]));
+      } 
+
+
+      echo json_encode($rspta); 
     break;
 
     //Creamos el caso para desactivar

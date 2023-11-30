@@ -5,6 +5,7 @@ session_start();
 
 $empleado=new Empleado();
 
+//registros para el debug.log
 //write_log(json_encode($_GET));
 //write_log(json_encode($_POST));
 //write_log(json_encode($_FILES));
@@ -31,7 +32,7 @@ $pwd=isset($_POST['pwd'])?limpiarCadenas($_POST['pwd']):"";
 $fotoActual=isset($_POST['fotoActual'])?limpiarCadenas($_POST['fotoActual']):"";
 
 date_default_timezone_set('America/Mexico_City');
-$fechaActualizacion=date("Y-m-d");
+$fechaActualizacion=date("Y-m-d H:i:s");
 $idEmpActualiza= $_SESSION['id']; // Cambiar por el usuario de la sesion.
 
 $imagen=""; //octenr lla img con la que voy a trabajar
@@ -71,10 +72,10 @@ switch ($_GET["op"]){
 
         if($pwd == $hashValidador){
           $pwd="";
-          write_log("Ajax empleado - editar iguales valor de hashValidador: $hashValidador || pwd = $pwd");
+        //  write_log("Ajax empleado - editar iguales valor de hashValidador: $hashValidador || pwd = $pwd");
         }else{
           $pwd=set_pass($pwd);
-          write_log("Ajax empleado - editar diferentes valor de hashValidador: $hashValidador || pwd = $pwd");
+         // write_log("Ajax empleado - editar diferentes valor de hashValidador: $hashValidador || pwd = $pwd");
         }
         $nombre=encryption($nombre);
         $primerApellido=encryption($primerApellido);

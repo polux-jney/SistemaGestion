@@ -162,7 +162,7 @@ function mostrar(idGasto){
 		mostrarform(true); 
 		//rellenamos a través de instrucciones jQuery los campos del formulario con los datos que nos regresó el Ajax
 		$("#idGasto").val(data.idGasto);
-		$("#descripcionGasto").val(data.descripcion);
+		$("#descripcionGasto").val(data.descripcionGasto);
 		$("#fechaGasto").val(data.fechaGasto);
 		$("#gasto").val(data.gasto);
 		$("#idCategoria").val(data.idCategoria);

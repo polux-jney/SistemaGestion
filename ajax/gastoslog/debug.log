@@ -525,3 +525,20 @@ Modelo empleado - editar query =UPDATE empleados SET nombre='amh1a25FVUl3TndlT05
 {"op":"listar","_":"1700735777397"}
 ===================== 2023-11-23 11:36:32 ==============
 []
+===================== 2023-11-30 12:51:19 ==============
+Ajax empleado - editar iguales valor de hashValidador: b048f8ff92e78600fdcddd790c2804ba0b1ed673572291eaa10e5e02a1c6dc8b || pwd = 
+===================== 2023-11-30 12:51:19 ==============
+Modelo empleado - editar query =UPDATE empleados SET nombre='c1BMaXNqMXlvbVEwV2lrbFNqSjBrQT09OjrKFi3TkY7C2A414OsrZd0C', primerApellido='ZDNmY1JVVUF6WHp5K2RJbEw0clNNUT09OjrknI41zlUPfP9AStuHjed7', segundoApellido='QVAwdjhBdUJxODVML05FK2FmbW1nZz09OjqAngYdMOt6l37p48q/252M', email='yozu@gmail.com', fechaEntrada='2023-11-22', fechaBaja='', idDepartamento='1', idJefe='', esJefe='0', usr='azu', foto='default.png', fechaActualizacion='2023-11-30', idEmpActualiza='9'
+      WHERE idEmpleado='3' 
+===================== 2023-11-30 13:17:56 ==============
+ajax empleado mostrar
+===================== 2023-11-30 13:17:56 ==============
+{"idGasto":"6","fechaGasto":"2023-11-29 00:00:00","descripcionGasto":"agendas 2024","idCategoria":"7","gasto":"2000","activo":"1","fechaCreacion":"2023-11-23 07:18:52","fechaActualizacion":"2023-11-30 13:04:15","idEmpActualiza":"9"}
+===================== 2023-11-30 13:19:21 ==============
+ajax empleado mostrar
+===================== 2023-11-30 13:19:21 ==============
+{"idGasto":"6","fechaGasto":"2023-11-29 00:00:00","descripcionGasto":"agendas 2024","idCategoria":"7","gasto":"2000","activo":"1","fechaCreacion":"2023-11-23 07:18:52","fechaActualizacion":"2023-11-30 13:04:15","idEmpActualiza":"9"}
+===================== 2023-11-30 13:19:44 ==============
+ajax empleado mostrar
+===================== 2023-11-30 13:19:44 ==============
+{"idGasto":"6","fechaGasto":"2023-11-29 00:00:00","descripcionGasto":"agendas 2024","idCategoria":"7","gasto":"2000","activo":"1","fechaCreacion":"2023-11-23 07:18:52","fechaActualizacion":"2023-11-30 13:04:15","idEmpActualiza":"9"}

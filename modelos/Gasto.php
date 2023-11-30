@@ -4,7 +4,7 @@ require "../config/conexion.php";
 
 Class Gasto{
   public function __construct(){
-
+ 
   }
  
   public function insertar($fechaGasto, $descripcionGasto, $idCategoria, $gasto, $idEmpActualiza){
@@ -31,7 +31,8 @@ Class Gasto{
   }	
 
   public function mostrar($idGasto){
-    $sql= "SELECT idGasto, fechaGasto, descripcionGasto, idCategoria, gasto, activo, fechaCreacion, 
+    $sql= "SELECT idGasto, fechaGasto, descripcionGasto,
+     idCategoria, gasto, activo, fechaCreacion, 
     fechaActualizacion, idEmpActualiza FROM gastos 
     WHERE  idGasto='$idGasto' " ;
 
